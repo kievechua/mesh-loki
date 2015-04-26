@@ -7,7 +7,7 @@ Streamable database adapter for [LokiJS](http://lokijs.org/#/), an in-memory Jav
 ```javascript
 var crud   = require("crudlet");
 var lokidb = require("crudlet-loki");
-var loki   = require("loki");
+var loki   = require("lokijs");
 var _      = require("highland");
 
 // setup the DB
@@ -17,7 +17,7 @@ var db = lokidb(new loki(__dirname + "/db.json"));
 // setup the child collection
 var peopleDb = crud.child(db, { collection: "people" });
 
-// insert one, or many items
+// insert one, or many itemsl
 peopleDb("insert", {
   data: [
     { name: "Sleipnir"    , legs: 8 },
